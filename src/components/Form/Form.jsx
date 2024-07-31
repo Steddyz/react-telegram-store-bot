@@ -10,7 +10,7 @@ export default function Form() {
   const { tg } = useTelegram();
 
   useEffect(() => {
-    tg.MainButton.setParamns({ text: "Отправить данные" });
+    tg.MainButton.setParams({ text: "Отправить данные" });
   }, []);
 
   const onChangeCountry = (e) => {
