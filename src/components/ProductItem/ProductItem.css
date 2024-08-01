@@ -1,0 +1,25 @@
+.product {
+  display: flex;
+  flex-direction: column;
+
+  padding: 15px;
+  width: 170px;
+  border: 1px solid var(--tg-theme-button-color);
+}
+
+.img {
+  margin: 0 auto;
+  height: 100px;
+  width: 100%;
+
+  background: rgb(207, 207, 207);
+  background-color: var(--tg-theme-button-color);
+}
+
+.description {
+  font-size: 0.8em;
+}
+
+.add-btn {
+  width: 100%;
+}
