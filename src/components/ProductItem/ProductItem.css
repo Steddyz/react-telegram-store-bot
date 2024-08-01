@@ -13,7 +13,8 @@
   width: 100%;
 
   background: rgb(207, 207, 207);
-  background-color: var(--tg-theme-button-color);
+
+  background: var(--tg-theme-button-color);
 }
 
 .description {
