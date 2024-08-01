@@ -57,7 +57,7 @@ const products = [
 
 const getTotalPrice = (items) => {
   return items.reduce((acc, item) => {
-    return (acc += items.price);
+    return (acc += item.price);
   }, 0);
 };
 
@@ -65,12 +65,12 @@ export default function ProductList() {
   const [addedItems, setAddedItems] = useState([]);
   const { tg } = useTelegram();
 
-  const onAdd = (products) => {
+  const onAdd = (product) => {
     const alreadyAdded = addedItems.find((item) => item.id === product.id);
     let newItems = [];
 
     if (alreadyAdded) {
-      newItems = addedItems.filter((item) => item.id !== products.id);
+      newItems = addedItems.filter((item) => item.id !== product.id);
     } else {
       newItems = [...addedItems, product];
     }
@@ -81,7 +81,7 @@ export default function ProductList() {
       tg.MainButton.hide();
     } else {
       tg.MainButton.show();
-      tg.MainButton.setParams({ text: `Купить${getTotalPrice(newItems)}` });
+      tg.MainButton.setParams({ text: `Купить ${getTotalPrice(newItems)}` });
     }
   };
 
