@@ -12,7 +12,7 @@
   height: 100px;
   width: 100%;
 
-  background: rgb(207, 207, 207);
+  background: lightblue;
 
   background: var(--tg-theme-button-color);
 }
